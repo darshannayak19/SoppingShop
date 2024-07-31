@@ -8,7 +8,11 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      height: {
+        '112': '28rem', // This adds a custom height class for 28rem (448px)
+      },
+    },
   },
   plugins: [],
 }

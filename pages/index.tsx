@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Header from '../components/Header/Header';
 import ProductType from '../components/Products/productTypes';
 import Slideshow from '../components/Slideshow/Slideshow';
+import About from '../components/Common/About';
 
 const Home: React.FC = () => {
   return (
@@ -16,6 +17,7 @@ const Home: React.FC = () => {
       <main className="flex flex-col">
       <Slideshow />
       <ProductType/>
+      <About/>
       </main>
       {/* <ProductList /> */}
     </div>
