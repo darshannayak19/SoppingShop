@@ -1,3 +1,4 @@
+import React from 'react';
 import Image from 'next/image';
 import slide1 from './images/slide1.jpeg';
 import slide2 from './images/slide2.jpg';
@@ -13,8 +14,8 @@ const categories = [
 
 const ProductTypes = () => (
   <div className="relative z-20 mt-8 overflow-hidden">
-    <div className="marquee-container flex space-x-4 p-4 whitespace-nowrap">
-      <div className="marquee flex animate-marquee">
+    <div className="marquee-container relative flex space-x-4 p-4">
+      <div className="marquee flex">
         {categories.concat(categories).map((category, index) => (
           <div key={index} className="marquee-item flex flex-col items-center w-[20vw] h-[35vh] flex-shrink-0 transform transition-transform duration-300 hover:scale-105">
             <div className="relative w-[90%] h-[90%] mb-2">
@@ -36,13 +37,16 @@ const ProductTypes = () => (
         0% { transform: translateX(0%); }
         100% { transform: translateX(-50%); }
       }
-      .marquee-container:hover .marquee {
-        animation-play-state: paused;
+      .marquee-container {
+        overflow: hidden;
       }
-    `}</style>
-    <style jsx global>{`
-      .animate-marquee {
+      .marquee {
+        display: flex;
+        width: 200%;
         animation: marquee 30s linear infinite;
+      }
+      .marquee:hover {
+        animation-play-state: paused;
       }
     `}</style>
   </div>
