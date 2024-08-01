@@ -1,10 +1,14 @@
 import Image from 'next/image';
-import slide1 from './images/slide1.jpg';
+import slide1 from './images/slide1.jpeg';
+import slide2 from './images/slide2.jpg';
+import slide3 from './images/slide3.jpeg';
+import slide4 from './images/slide4.jpeg';
+
 const categories = [
   { id: 1, name: 'Mens', image: slide1 },
-  { id: 2, name: 'Women', image: slide1 },
-  { id: 3, name: 'Kids', image: slide1 },
-  { id: 4, name: 'Boys & Girls', image: slide1 }
+  { id: 2, name: 'Women', image: slide2 },
+  { id: 3, name: 'Kids', image: slide3 },
+  { id: 4, name: 'Boys & Girls', image: slide4 }
 ];
 
 const ProductTypes = () => (

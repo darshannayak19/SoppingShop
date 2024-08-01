@@ -4,6 +4,7 @@ import Header from '../components/Header/Header';
 import ProductType from '../components/Products/productTypes';
 import Slideshow from '../components/Slideshow/Slideshow';
 import About from '../components/Common/About';
+import ContactUs from '../components/Contactus/Contactus';
 
 const Home: React.FC = () => {
   return (
@@ -18,6 +19,7 @@ const Home: React.FC = () => {
       <Slideshow />
       <ProductType/>
       <About/>
+      <ContactUs/>
       </main>
       {/* <ProductList /> */}
     </div>
