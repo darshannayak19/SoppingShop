@@ -1,24 +1,25 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { useCart } from '../Cart/cartContext';
-import slide1 from './images/slide1.jpeg';
-import slide2 from './images/slide2.jpg';
-import slide3 from './images/slide3.jpeg';
-import slide4 from './images/slide4.jpeg';
+import { StaticImageData } from 'next/image';
+import jeans from './images/jeans.jpg';
+import shoes from './images/shoes.jpg';
+import tshirt from './images/tshirt.jpg';
+import watch from './images/watch.jpg';
 
 interface Product {
   id: number;
   name: string;
   category: string;
   price: number;
-  image: string;
+  image: StaticImageData;
 }
 
 const products: Product[] = [
-  { id: 1, name: 'T-Shirt', category: 'Clothing', price: 19.99, image: slide1},
-  { id: 2, name: 'Jeans', category: 'Clothing', price: 49.99, image: slide2},
-  { id: 3, name: 'Sneakers', category: 'Shoes', price: 79.99, image: slide3},
-  { id: 4, name: 'Watch', category: 'Accessories', price: 129.99, image: slide4},
+  { id: 1, name: 'T-Shirt', category: 'Clothing', price: 19.99, image: tshirt },
+  { id: 2, name: 'Jeans', category: 'Clothing', price: 49.99, image: jeans },
+  { id: 3, name: 'Shoes', category: 'Shoes', price: 79.99, image: shoes },
+  { id: 4, name: 'Watch', category: 'Accessories', price: 129.99, image: watch },
   // Add more products as needed
 ];
 
