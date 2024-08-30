@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
+import { useCart } from '../Cart/cartContext';
+import slide1 from './images/slide1.jpeg';
+import slide2 from './images/slide2.jpg';
+import slide3 from './images/slide3.jpeg';
+import slide4 from './images/slide4.jpeg';
 
 interface Product {
   id: number;
@@ -9,12 +14,11 @@ interface Product {
   image: string;
 }
 
-// Sample product data
-const products = [
-  { id: 1, name: 'T-Shirt', category: 'Clothing', price: 19.99, image: '/images/slide1.jpeg'},
-  { id: 2, name: 'Jeans', category: 'Clothing', price: 49.99, image: '/images/slide2.jpg'},
-  { id: 3, name: 'Sneakers', category: 'Shoes', price: 79.99, image: '/images/slide3.jpeg'},
-  { id: 4, name: 'Watch', category: 'Accessories', price: 129.99, image: '/images/slide4.jpeg'},
+const products: Product[] = [
+  { id: 1, name: 'T-Shirt', category: 'Clothing', price: 19.99, image: slide1},
+  { id: 2, name: 'Jeans', category: 'Clothing', price: 49.99, image: slide2},
+  { id: 3, name: 'Sneakers', category: 'Shoes', price: 79.99, image: slide3},
+  { id: 4, name: 'Watch', category: 'Accessories', price: 129.99, image: slide4},
   // Add more products as needed
 ];
 
@@ -23,11 +27,18 @@ const categories = ['All', 'Clothing', 'Shoes', 'Accessories'];
 const ProductList: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [priceRange, setPriceRange] = useState(200);
+  const { addToCart } = useCart();
 
   const filteredProducts = products.filter(product => 
     (selectedCategory === 'All' || product.category === selectedCategory) &&
     product.price <= priceRange
   );
+
+  const handleAddToCart = (product: Product) => {
+    addToCart(product);
+    // Optionally, you can add a visual feedback here, like a toast notification
+    alert(`${product.name} added to cart!`); // Replace with a more sophisticated notification system
+  };
 
   return (
     <div className="flex flex-col md:flex-row gap-8">
@@ -87,7 +98,10 @@ const ProductList: React.FC = () => {
                     <p className="text-gray-600 mb-2">{product.category}</p>
                     <p className="text-blue-600 font-bold">${product.price.toFixed(2)}</p>
                   </div>
-                  <button className="mt-4 w-full bg-blue-500 text-white py-2 rounded transition-all duration-300 hover:bg-blue-600 hover:shadow-md transform hover:-translate-y-1">
+                  <button 
+                    onClick={() => handleAddToCart(product)}
+                    className="mt-4 w-full bg-blue-500 text-white py-2 rounded transition-all duration-300 hover:bg-blue-600 hover:shadow-md transform hover:-translate-y-1"
+                  >
                     Add to Cart
                   </button>
                 </div>
