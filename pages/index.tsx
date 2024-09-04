@@ -10,7 +10,7 @@ const Home: React.FC = () => {
   return (
     <div>
       <Head>
-        <title>My Shopping Site</title>
+        <title>Ethnic Doriya</title>
         <meta name="description" content="A great shopping site built with Next.js" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
