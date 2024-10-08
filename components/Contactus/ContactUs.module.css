@@ -1,0 +1,84 @@
+.inputContainer {
+    position: relative;
+  }
+  
+  .inputContainer input::placeholder,
+  .inputContainer textarea::placeholder {
+    color: transparent;
+  }
+  
+  .inputContainer label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+    line-height: 1.5;
+    color: #495057;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    transition: all .1s ease-in-out;
+    padding: 0.375rem 0.75rem;
+    pointer-events: none;
+  }
+  
+  .inputContainer input::-webkit-input-placeholder,
+  .inputContainer textarea::-webkit-input-placeholder {
+    opacity: 0;
+    transition: opacity .1s ease-in-out;
+  }
+  
+  .inputContainer input::-moz-placeholder,
+  .inputContainer textarea::-moz-placeholder {
+    opacity: 0;
+    transition: opacity .1s ease-in-out;
+  }
+  
+  .inputContainer input:-ms-input-placeholder,
+  .inputContainer textarea:-ms-input-placeholder {
+    opacity: 0;
+    transition: opacity .1s ease-in-out;
+  }
+  
+  .inputContainer input::-ms-input-placeholder,
+  .inputContainer textarea::-ms-input-placeholder {
+    opacity: 0;
+    transition: opacity .1s ease-in-out;
+  }
+  
+  .inputContainer input:not(:placeholder-shown),
+  .inputContainer textarea:not(:placeholder-shown) {
+    padding-top: 1.25rem;
+    padding-bottom: .25rem;
+  }
+  
+  .inputContainer input:not(:placeholder-shown) ~ label,
+  .inputContainer textarea:not(:placeholder-shown) ~ label {
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    font-size: 12px;
+    color: #777;
+  }
+  
+  .input {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  .input:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+  }

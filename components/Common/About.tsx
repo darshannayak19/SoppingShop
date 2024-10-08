@@ -5,10 +5,10 @@ import 'aos/dist/aos.css';
 import slide1 from '../Slideshow/images/slide1.jpg'
 
 const items = [
-  { id: 1, name: 'Item 1', description: 'Description for item 1', image: slide1 },
-  { id: 2, name: 'Item 2', description: 'Description for item 2', image: slide1 },
-  { id: 3, name: 'Item 3', description: 'Description for item 3', image: slide1 },
-  { id: 4, name: 'Item 4', description: 'Description for item 4', image: slide1 },
+  { id: 1, name: 'Banarasi Saree', description: 'The Banarasi saree is a traditional and highly coveted type of saree that originates from the city of Varanasi, India. It is known for its intricate designs, opulent silk fabric, and stunning craftsmanship. The Banarasi saree is typically made with pure silk and is adorned with elaborate motifs and patterns such as brocade, zari, and meenakari work.', image: slide1 },
+  { id: 2, name: 'Banarasi Saree', description: 'The Banarasi saree is a traditional and highly coveted type of saree that originates from the city of Varanasi, India. It is known for its intricate designs, opulent silk fabric, and stunning craftsmanship. The Banarasi saree is typically made with pure silk and is adorned with elaborate motifs and patterns such as brocade, zari, and meenakari work.', image: slide1 },
+  { id: 3, name: 'Banarasi Saree', description: 'The Banarasi saree is a traditional and highly coveted type of saree that originates from the city of Varanasi, India. It is known for its intricate designs, opulent silk fabric, and stunning craftsmanship. The Banarasi saree is typically made with pure silk and is adorned with elaborate motifs and patterns such as brocade, zari, and meenakari work.', image: slide1 },
+  { id: 4, name: 'Banarasi Saree', description: 'The Banarasi saree is a traditional and highly coveted type of saree that originates from the city of Varanasi, India. It is known for its intricate designs, opulent silk fabric, and stunning craftsmanship. The Banarasi saree is typically made with pure silk and is adorned with elaborate motifs and patterns such as brocade, zari, and meenakari work.', image: slide1 },
 ];
 
 const About = () => {
